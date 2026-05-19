@@ -1,0 +1,129 @@
+/* ================= BODY ================= */
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#000;
+  font-family:'Segoe UI',sans-serif;
+  overflow:hidden;
+}
+
+/* PARTICLES */
+canvas{
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+
+/* APP */
+.app{
+  display:flex;
+  gap:20px;
+}
+
+/* ================= CALCULATOR ================= */
+.calculator{
+  width:340px;
+  padding:20px;
+  border-radius:20px;
+
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(20px);
+
+  border:1px solid rgba(255,255,255,0.1);
+
+  transition:0.2s;
+}
+
+/* DISPLAY */
+.display{
+  width:100%;
+  height:80px;
+  font-size:2rem;
+  text-align:right;
+  border:none;
+  background:transparent;
+  color:#fff;
+  margin-bottom:15px;
+}
+
+/* GRID */
+.buttons{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+
+/* BUTTON */
+button{
+  padding:18px;
+  font-size:1.1rem;
+  border:none;
+  border-radius:12px;
+  background:rgba(255,255,255,0.08);
+  color:#fff;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+/* NEON */
+button:hover{
+  box-shadow:0 0 10px #8a2be2,0 0 20px #8a2be2;
+}
+
+/* TYPES */
+.operator{ background:#ff9500; }
+.equal{ background:#00c853; }
+.clear{ background:#ff3b30; }
+
+.zero{ grid-column:span 2; }
+
+/* SCI PANEL */
+.sci{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+  margin-top:10px;
+}
+
+.hidden{ display:none; }
+
+/* TOGGLE BUTTON */
+.toggleSci{
+  margin-top:10px;
+  width:100%;
+}
+
+/* HISTORY */
+.history{
+  width:220px;
+  padding:15px;
+  border-radius:20px;
+
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(20px);
+
+  max-height:400px;
+  overflow-y:auto;
+}
+
+.history div{
+  padding:8px;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+  cursor:pointer;
+}
+
+.history div:hover{
+  background:rgba(255,255,255,0.1);
+}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+  .app{
+    flex-direction:column;
+    align-items:center;
+  }
+}
